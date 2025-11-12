@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HappyKids</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav-wrap">
+    <div class="nav-inner">
+      <div class="logo">
+        <a href="#o-nas">
+          <img src="media/logo HappyKids_v3.png" alt="HappyKids logo" />
+        </a>
+      </div>
+
+      <!-- HAMBURGER -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Otwórz menu" />
+      <label for="nav-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" role="navigation">
+        <a href="#o-nas">O nas</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#nasz-dzien">Nasz dzień</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#wspolprace">Współprace</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <span>Niepubliczny Punkt Przedszkolny</span>
+    <span>📞 +48 455 401 606</span>
+    <span>ul. Trawowa 34, 54-614 Wrocław</span>
+    
+  </div>
+</div>
+  </header>
+
+  <!-- O NAS -->
+  <section id="o-nas" class="section yellow">
+    <div class="o-nas-container">
+      <div class="text-content">
+        <h2>O nas</h2>
+        <p>Witamy w naszym przedszkolu!<br>Łączymy naukę i zabawę w ciepłej, bezpiecznej atmosferze.</p>
+        <p>Nasz zespół tworzą doświadczeni pedagodzy, którzy z pasją dbają o rozwój emocjonalny i społeczny najmłodszych.</p>
+        <a href="podstrony/o-nas.html" class="btn-more">Więcej</a>
+      </div>
+
+      <div class="o-nas-img">
+        <img src="media/girl_01.png" alt="Dziecko w przedszkolu" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CHMURKA -->
+  <div class="cloud-divider">
+    <img src="media/kolka.png" alt="Dekoracyjna chmurka" />
+  </div>
+
+  <!-- OFERTA -->
+  <section id="oferta" class="section oferta">
+    <div class="oferta-container">
+      <div class="text-content">
+        <h2>Oferta</h2>
+        <p>
+          Placówka czynna w godzinach <strong>7:00–17:00</strong>.<br />
+          Oferujemy pełne wyżywienie, w postaci czterech posiłków dziennie <br>- przygotowane przez sprawdzony katering.
+        </p>
+        <p>
+          W czasie pobytu zapewniamy bogaty program edukacyjny: zajęcia dydaktyczne, język angielski,
+          rytmikę, sport, zabawy sensoryczne i wiele twórczych aktywności.
+        </p>
+        <p>
+          Kameralna atmosfera, indywidualne podejście do każdego dziecka i radość wspólnej nauki –
+          to nasz przepis na szczęśliwe przedszkole.
+        </p>
+        <a href="podstrony/oferta.html" class="btn-more-oferta">Więcej</a>
+      </div>
+
+      <div class="oferta-img">
+        <img src="media/slonko.png" alt="Słonko HappyKids" class="slonko-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- NASZ DZIEŃ — KARUZELA 9 OKIENEK -->
+<section id="nasz-dzien" class="section yellow">
+  <div class="container">
+    <h2>Nasz dzień</h2>
+
+    <div class="carousel cards-3" aria-label="Nasz dzień — karuzela">
+      <button class="carousel-btn prev" aria-label="Poprzednia grupa">‹</button>
+
+      <div class="carousel-track" id="dayGrid">
+        <!-- 1 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="time">7:00–9:00</span>
+          </div>
+          <img src="naszdzien_zdj/klocki.jpeg" alt="Zabawy dowolne">
+          <div class="card-bottom">
+            <p class="caption">Zabawy dowolne</p>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="time">9:00–10:00</span>
+          </div>
+          <img src="naszdzien_zdj/mycie.jpeg" alt="Powitanie, toaleta poranna, śniadanie">
+          <div class="card-bottom">
+            <p class="caption">Powitanie, toaleta poranna, śniadanie</p>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="time">10:00–11:00</span>
+          </div>
+          <img src="naszdzien_zdj/edukacyjne.jpeg" alt="Zajęcia edukacyjne">
+          <div class="card-bottom">
+            <p class="caption">Zajęcia edukacyjne</p>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="time">11:15–12:30</span>
+          </div>
+          <img src="naszdzien_zdj/sport.jpeg" alt="Zabawa w ogrodzie">
+          <div class="card-bottom">
+            <p class="caption">Zabawa w ogrodzie</p>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="time">12:30–13:00</span>
+          </div>
+          <img src="naszdzien_zdj/obiad.jpeg" alt="Obiad">
+          <div class="card-bottom">
+            <p class="caption">Obiad</p>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="time">13:00–14:00</span>
+          </div>
+          <img src="naszdzien_zdj/goodday.jpeg" alt="J. angielski, odpoczynek">
+          <div class="card-bottom">
+            <p class="caption">J. angielski, odpoczynek</p>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="time">14:00–14:45</span>
+          </div>
+          <img src="naszdzien_zdj/czytanie.jpeg" alt="Czytanie bajek, zabawy dowolne">
+          <div class="card-bottom">
+            <p class="caption">Odpoczynek, zabawy dowolne</p>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="time">15:30–16:00</span>
+          </div>
+          <img src="naszdzien_zdj/owoce.jpeg" alt="Podwieczorek">
+          <div class="card-bottom">
+            <p class="caption">Podwieczorek</p>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="card">
+          <div class="card-top">
+            <span class="time">16:00–17:00</span>
+          </div>
+          <img src="naszdzien_zdj/miś.jpeg" alt="Zabawy dowolne, odbiór dzieci">
+          <div class="card-bottom">
+            <p class="caption">Zabawy dowolne, odbiór dzieci</p>
+          </div>
+        </article>
+      </div>
+
+      <button class="carousel-btn next" aria-label="Następna grupa">›</button>
+      <div class="carousel-dots" id="dayDots" aria-label="Nawigacja stron"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- GALERIA -->
+<section id="galeria" class="section white">
+  <div class="container">
+    <h2>Galeria</h2>
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <img src="fotki/20250917_104818.jpg" alt="Zabawy w przedszkolu">
+      </div>
+      <div class="gallery-item">
+        <img src="fotki/20250919_102122.jpg" alt="Zajęcia ruchowe">
+      </div>
+      <div class="gallery-item">
+        <img src="fotki/20250902_100107.jpg" alt="Zabawa na świeżym powietrzu">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- WSPÓŁPRACE -->
+<section id="wspolprace" class="section white">
+  <div class="container">
+    <h2>Współpraca</h2>
+
+    <div class="partners-grid">
+      <button class="partner" data-name="Teatr Arlekin" data-description="
+Dzięki pasji, zaangażowaniu i pozytywnej energii Aktorów, dzieci z wielkim przejęciem odkrywają świat
+baśni. Każde spotkanie jest dla naszych Przedszkolaków źródłem radości i dobrej zabawy.">
+        <img src="wspolprace_biale/Arlekin.jpg" alt="Teatr Arlekin">
+      </button>
+
+      <button class="partner" data-name="Akademia Dzikiego Dziecka" data-description="Zajęcia przyrodnicze i survivalowe w plenerze.">
+        <img src="wspolprace_biale/Dziki.png" alt="Akademia Dzikiego Dziecka">
+      </button>
+
+      <button class="partner" data-name="Czas Na Warsztaty" data-description="Nowoczesne zajęcia edukacyjne z wykorzystaniem zestawów LEGO Education WeDo 2.0, stworzone z myślą o najmłodszych.">
+        <img src="wspolprace_biale/CzasNaWarsztaty2.jpg" alt="Czas Na Warsztaty">
+      </button>
+
+      <button class="partner" data-name="Emski" data-description="Na zajęciach najmłodsi mogą zapoznać się z elementami dyscyplin sportowych takimi jak piłka nożna, siatkówka, koszykówka, hokej, piłka ręczna, lekkoatletyka">
+        <img src="wspolprace_biale/emski2.png" alt="Emski">
+      </button>
+
+      <button class="partner" data-name="Przyroda i Ja" data-description="Zajęcia przyrodniczo – ekologiczne, które z powodzeniem są realizowane przez p. Maćka już od kilku lat
+w naszej placówce. Przy pomocy atrakcyjnej formy zajęć, dzieci wprowadzane są w fascynujący świat
+zwierząt , roślin, grzybów i mikroorganizmów poznając funkcjonowanie wszechświata.">
+        <img src="wspolprace_biale/przyrodaija.jpg" alt="Przyroda i Ja">
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- POPUP / MODAL -->
+<div id="partnerModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-content" role="document">
+    <button class="modal-close" aria-label="Zamknij">&times;</button>
+    <img id="modalImage" src="" alt="" />
+    <div class="modal-text">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- KONTAKT -->
+<section id="kontakt" class="section white">
+  <div class="container">
+    <div class="contact-info">
+      <h2>Kontakt</h2>
+      <p><strong>Niepubliczny Punkt Przedszkolny "HappyKids"</strong></p>
+      <p>
+  📞 Telefon: <a href="tel:+48455401606">+48 455 401 606</a><br>
+  <span class="mail-line">
+    <img src="icons/email.png" alt="Ikona poczty" class="icon-mail">
+    <a href="mailto:przedszkolehappykids.wroc@gmail.com">
+      przedszkolehappykids.wroc@gmail.com
+    </a>
+  </span>
+</p>
+
+
+      <p>Godziny otwarcia:<br />Poniedziałek - Piątek: 7:00 - 17:00</p>
+      
+
+      <div class="facebook-info">
+  <a class="facebook-link" href="https://www.facebook.com/profile.php?id=100063485363954" target="_blank">
+    Dołącz do nas 
+    <img src="icons/facebook.png" alt="Facebook" class="icon-facebook" />
+  </a>
+</div>
+    </div>
+
+    <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20043.530250179017!2d16.93820597875979!3d51.1003179468548!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc1bed2c95555%3A0x19ea65021b2a3faa!2sNiepubliczny%20Punkt%20Przedszkolny%20Happy%20Kids!5e0!3m2!1sen!2spl!4v1762887293449!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

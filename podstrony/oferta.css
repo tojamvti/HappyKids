@@ -1,0 +1,254 @@
+/* ===== STRONA: OFERTA (spójna kolorystyka HappyKids) ===== */
+
+
+
+/* --- naprawa przesunięcia treści pod fixed header/top-bar --- */
+body {
+  padding-top: 0 !important;
+}
+
+.page-content {
+  background: #fff;
+  color: var(--brand-text);
+  min-height: 100vh;
+  text-align: left;
+}
+
+.page-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--brand-text);
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--brand-yellow);
+  margin-bottom: 24px;
+}
+
+
+
+/* --- układ główny --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: left;
+}
+
+/* --- nagłówki i tekst --- */
+h1 {
+  font-size: 32px;
+  margin: 0 0 16px;
+  color: #000000;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 36px 0 12px;
+  color: #000000;
+}
+
+p { line-height: 1.5; }
+
+/* --- Szybkie fakty – dwa rzędy (3 + 2) --- */
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0 12px;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fact {
+  background: #fff8cc; /* jasny żółty */
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: grid;
+  gap: 6px;
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.fact .label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #3a3a3a;
+  opacity: .8;
+}
+
+.fact .value {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--brand-text);
+}
+
+.fact small {
+  font-size: 12px;
+  color: #555;
+  opacity: .85;
+}
+
+/* --- Lista „zapewniamy” --- */
+.feature-list {
+  margin: 12px 0 8px;
+  padding-left: 20px;
+}
+
+.feature-list li {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+/* --- Karty zajęć --- */
+.offer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .offer-grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: #00a0e3;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.card ul li { margin: 6px 0; }
+
+/* --- Urodziny --- */
+
+.birthday {
+  border-top: 2px solid #8b8b8b;   /* cienka linia oddzielająca sekcję */
+  margin-top: 40px;             /* odstęp od sekcji wyżej */
+  padding-top: 20px;            /* przestrzeń nad tytułem */
+}
+
+
+
+.birthday .price {
+  font-size: 22px;
+  margin: 6px 0 10px;
+  color: #C84B31;
+}
+
+.birthday .muted {
+  font-size: 14px;
+  color: #555;
+  opacity: .9;
+  margin: 8px 0 4px;
+}
+
+.birthday .note {
+  margin-top: 10px;
+  font-size: 14px;
+  background: #fff7d9;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border-left: 4px solid var(--brand-yellow);
+  color: #333;
+}
+
+.birthday-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .birthday-grid { grid-template-columns: 1fr; }
+}
+
+/* --- CTA / powrót --- */
+.cta-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.btn-back,
+.btn-cta {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 26px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .2s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease;
+  outline: none;
+}
+
+/* „Wróć” – żółty */
+.btn-back {
+  background: var(--brand-yellow);
+  color: #000000;
+}
+
+.btn-back:hover {
+  background: #f2d400;
+  transform: translateY(-2px);
+}
+
+.btn-back:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255,226,0,.45);
+}
+
+/* „Zapytaj” – zielony */
+.btn-cta {
+  background: #91bf2d;
+  color: #000000;
+}
+
+.btn-cta:hover {
+  background: #98c23f;
+  transform: translateY(-2px);
+}
+
+.btn-cta:focus-visible {
+  box-shadow: 0 0 0 3px rgba(52,103,81,.35);
+}
+
+/* --- Drobne dopieszczenia --- */
+.page-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--brand-text);
+}
+
+.page-content > *:first-child {
+  margin-top: 0;
+}

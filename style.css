@@ -1,0 +1,465 @@
+/* ============ ROOT & RESET ============ */
+:root{
+  --yellow:#FFE200;
+  --text:#161616;
+  --bg:#fff;
+  --muted:#666;
+  --container:1200px;
+  --gutter:24px;
+  --radius:16px;
+  --nav-h:80px;
+  --topbar-h:34px;
+  --shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+  padding-top:calc(var(--topbar-h) + var(--nav-h));
+}
+
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ============ LAYOUT HELPERS ============ */
+.container{
+  max-width:var(--container);
+  margin-inline:auto;
+  padding-inline:var(--gutter);
+}
+
+/* Domyślne zmienne dla sekcji (łatwe sterowanie per-sekcja) */
+.section{
+  --section-pt: 50px;     /* domyślny padding-top sekcji */
+  --section-pb: 50px;     /* domyślny padding-bottom sekcji */
+  --section-h2-mb: 18px;  /* domyślny odstęp pod tytułem h2 */
+  --section-gap: 40px;    /* domyślny gap w gridach wewnątrz sekcji */
+
+  padding: var(--section-pt) 0 var(--section-pb);
+}
+.section h2{
+  font-size:clamp(1.6rem,3vw,2.2rem);
+  margin:0 0 var(--section-h2-mb);
+}
+
+/* Kolory sekcji (naprzemiennie) */
+.section.yellow{background:var(--yellow)}
+.section.white{background:#fff}
+
+/* Dla sekcji bez klasy w HTML */
+#oferta.section{background:#fff}
+#galeria.section.white{background:#fff}
+#wspolprace.section.yellow{background:var(--yellow)}
+
+/* Scroll do kotwic nie chowa tytułów pod nagłówkiem */
+#o-nas, #oferta, #nasz-dzien, #galeria, #wspolprace, #kontakt{
+  scroll-margin-top: calc(var(--topbar-h) + var(--nav-h) + 10px);
+}
+
+/* ============ TOP BAR ============ */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--topbar-h);
+  background: #fff;
+  color: var(--text);
+  
+  z-index: 900;
+}
+
+.top-bar .container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter); /* identyczne z resztą strony */
+  display: flex;
+  justify-content: flex-start; /* tekst zaczyna się idealnie tam, gdzie logo */
+  align-items: center;
+  gap: 30px;
+  font-size: 13px;
+  font-weight: 400;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+
+/* ============ NAVBAR ============ */
+.nav-wrap{
+  position:fixed;top:var(--topbar-h);left:0;width:100%;
+  background:#fff;z-index:950;
+  transition:box-shadow .2s ease;
+}
+.nav-wrap.scrolled{box-shadow:var(--shadow)}
+.nav-inner{
+  min-height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter);
+}
+.logo img{height:80px;width:auto}
+
+/* Hamburger */
+.nav-toggle{display:none}
+.hamburger{display:none;cursor:pointer;width:34px;height:28px;position:relative}
+.hamburger span{
+  position:absolute;left:0;right:0;height:3px;background:var(--text);
+  border-radius:2px;transition:.25s ease;
+}
+.hamburger span:nth-child(1){top:2px}
+.hamburger span:nth-child(2){top:12px}
+.hamburger span:nth-child(3){top:22px}
+
+/* MENU desktop */
+.main-nav{display:flex;gap:18px;align-items:center}
+.main-nav a{padding:10px 12px;border-radius:10px;font-weight:600}
+.main-nav a:hover,.main-nav a.is-active{background:var(--yellow);color:#000}
+
+/* MENU mobile */
+@media (max-width:980px){
+  .hamburger{display:block}
+  .main-nav{
+    position:fixed;left:0;right:0;top:calc(var(--topbar-h) + var(--nav-h));
+    background:#fff;border-top:1px solid #eee;
+    display:flex;flex-direction:column;align-items:flex-start;gap:0;
+    transform:translateY(-140%);transition:transform .25s ease;
+    padding:8px var(--gutter);z-index:940;
+  }
+  .main-nav a{width:100%;padding:14px 8px;border-radius:10px}
+  .nav-toggle:checked ~ .hamburger span:nth-child(1){transform:translateY(10px) rotate(45deg)}
+  .nav-toggle:checked ~ .hamburger span:nth-child(2){opacity:0}
+  .nav-toggle:checked ~ .hamburger span:nth-child(3){transform:translateY(-10px) rotate(-45deg)}
+  .nav-toggle:checked ~ .main-nav{transform:translateY(0)}
+}
+
+/* ============ O NAS ============ */
+.o-nas-container{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:var(--section-gap);align-items:center;
+  max-width:var(--container);margin:0 auto;padding:0 var(--gutter);
+}
+@media (max-width:900px){.o-nas-container{grid-template-columns:1fr}}
+.text-content p{margin:0 0 12px}
+
+/* PRZYCISK O NAS (biały) */
+#o-nas .btn-more{
+  display:inline-block;
+  margin-top:30px;
+  padding:10px 24px;
+  background:#fff;
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+  border-radius:25px;
+  transition:background-color 0.3s ease, transform 0.2s ease;
+}
+#o-nas .btn-more:hover{
+  background:#f7f7f7;
+  transform:translateY(1px);
+}
+.o-nas-img img{max-width:360px;margin-inline:auto}
+
+/* ============ CHMURKA ============ */
+.cloud-divider{display:flex;justify-content:center;align-items:center;background:#fff}
+.cloud-divider img{max-width:220px;opacity:.85}
+
+/* ============ OFERTA ============ */
+.oferta-container{
+  display:grid;grid-template-columns:1.2fr 1fr;gap:var(--section-gap);align-items:center;
+  max-width:var(--container);margin:0 auto;padding:0 var(--gutter);
+}
+@media (max-width:900px){.oferta-container{grid-template-columns:1fr}}
+.oferta .text-content p{margin:0 0 12px}
+.slonko-img{max-width:300px;margin-inline:auto;display:block}
+
+/* PRZYCISK OFERTA (żółty) */
+#oferta .btn-more-oferta{
+  display:inline-block;
+  margin-top:30px;
+  padding:10px 24px;
+  background:var(--yellow);
+  color:#161616;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:25px;
+  border:2px solid transparent;
+  transition:background-color 0.3s ease, transform 0.2s ease;
+}
+#oferta .btn-more-oferta:hover{
+  filter:brightness(0.95);
+  transform:translateY(1px);
+}
+
+
+
+
+
+/* ===== KARUZELA ===== */
+#nasz-dzien .carousel{
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  padding:10px 0;
+  position:relative;
+  overflow:hidden;
+  margin-top:12px;
+}
+.carousel-track{
+  display:flex;
+  gap:8px;
+  transition:transform .35s ease;
+  will-change: transform;
+}
+#nasz-dzien .card {
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;
+}
+#nasz-dzien .card img {
+  width:100%;
+  max-height:260px;
+  height:auto;
+  object-fit:contain;
+  background:#fff;
+  border-radius:12px;
+  margin:0 auto;
+}
+.carousel-track .card{
+  flex:0 0 calc((100% - 2*8px)/3);
+  display:flex;flex-direction:column;
+  background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden;
+}
+@media (max-width:1000px){.carousel-track .card{flex:0 0 calc((100% - 16px)/2)}}
+@media (max-width:640px){.carousel-track .card{flex:0 0 100%}}
+.card-top{padding:10px 12px;font-weight:700;border-bottom:1px solid #f0f0f0;background:#fafafa;text-align:center;}
+.card-top .time{font-size:1.05rem}
+.card-bottom{padding:10px 12px;text-align:center}
+.caption{margin:0;font-weight:600}
+.carousel-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:44px;height:44px;border-radius:999px;border:0;
+  background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.15);
+  cursor:pointer;font-size:24px;display:grid;place-items:center;z-index:2;
+  transition:transform .2s ease, background-color .2s ease;
+  font-weight:900;
+}
+.carousel-btn:hover{transform:translateY(-50%) scale(1.05)}
+.carousel-btn.prev{left:8px}
+.carousel-btn.next{right:8px}
+.carousel-dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+.carousel-dots button{width:10px;height:10px;border-radius:999px;border:0;background:#d9d9d9;cursor:pointer}
+.carousel-dots button[aria-current="true"]{background:#346751}
+
+/* ============ GALERIA ============ */
+#galeria .container{max-width:var(--container)}
+.gallery-row{
+  display:grid;gap:10px;
+  grid-template-columns:repeat(3,1fr);
+}
+@media (max-width:900px){.gallery-row{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.gallery-row{grid-template-columns:1fr}}
+.gallery-item img{width:100%;border-radius:14px;object-fit:cover;aspect-ratio:4/3}
+
+/* ============ WSPÓŁPRACE ============ */
+#wspolprace {
+  background:#fff;
+  text-align:left;
+  position:relative;
+  overflow:hidden;
+
+  /* zmienne tej sekcji */
+  --stripe-h: 2.5em; /* wysokość żółtego paska pod tytułem (łatwo zmienisz niżej per-sekcja) */
+}
+#wspolprace h2 {
+  position:relative;
+  z-index:1;
+  font-size:clamp(1.6rem,3vw,2.2rem);
+  font-weight:600;
+  color:var(--text);
+  margin-bottom:var(--section-h2-mb);
+  padding:10px 0;
+}
+#wspolprace h2::before {
+  content:"";
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  width:100vw;
+  height: var(--stripe-h); /* sterowane zmienną */
+  background:var(--yellow);
+  z-index:-1;
+}
+#wspolprace .container {
+  max-width:var(--container);
+  margin-inline:auto;
+  padding-inline:var(--gutter);
+}
+.partners-grid {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  flex-wrap:nowrap;
+  gap:60px;
+  padding-top:20px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.partners-grid::-webkit-scrollbar{display:none}
+.partner {
+  border:0;background:transparent;padding:0;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+}
+.partner:focus-visible {
+  outline:3px solid var(--yellow);
+  outline-offset:4px;
+}
+.partner img {
+  max-height:140px;width:auto;object-fit:contain;
+  transition:transform .3s ease;
+}
+.partner img:hover{transform:scale(1.08)}
+
+/* MODAL */
+.modal {
+  position:fixed;inset:0;
+  display:none;
+  align-items:center;justify-content:center;
+  background:rgba(0,0,0,.5);
+  backdrop-filter:blur(2px);
+  z-index:3000;
+}
+.modal[aria-hidden="false"]{display:flex;}
+.modal-content {
+  background:#fff;color:var(--text);
+  display:flex;align-items:center;gap:32px;
+  max-width:860px;width:92%;
+  padding:32px;border-radius:16px;
+  box-shadow:0 16px 40px rgba(0,0,0,.2);
+  transform:translateY(10px);opacity:0;
+  animation:modal-in .25s ease forwards;
+}
+@keyframes modal-in {to{transform:translateY(0);opacity:1}}
+.modal-content img {
+  max-width:280px;max-height:220px;object-fit:contain;flex:0 0 auto;
+}
+.modal-text h3 {margin:0 0 10px;font-size:1.5rem;}
+.modal-text p {margin:0;line-height:1.6;color:#444;}
+.modal-close {
+  position:absolute;top:14px;right:18px;width:36px;height:36px;
+  border-radius:999px;border:0;background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.15);
+  font-size:22px;line-height:1;cursor:pointer;
+}
+.modal-close:hover{transform:scale(1.06)}
+@media (max-width:700px){
+  .modal-content{flex-direction:column;text-align:center;gap:20px;}
+  .modal-content img{max-width:220px;}
+}
+
+/* ============ KONTAKT ============ */
+#kontakt {
+  border-top:1px solid #807777;
+  /* padding sekcji #kontakt teraz też sterowany zmiennymi sekcyjnymi */
+}
+#kontakt .container{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:start;
+}
+@media (max-width:900px){#kontakt .container{grid-template-columns:1fr}}
+.contact-info p{margin:0 0 10px}
+.facebook-link {
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:10px;padding:10px 18px;border-radius:999px;
+  background:#1877f2;color:#fff;font-weight:600;font-size:1rem;
+  text-decoration:none;transition:background 0.3s ease, transform 0.2s ease;
+}
+.facebook-link:hover {
+  background:#145dbd;transform:translateY(-1px);
+}
+.icon-facebook {width:22px;height:22px;object-fit:contain;display:block;}
+.map-container iframe{
+  width:100%;height:360px;border:0;border-radius:14px;
+  box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+.mail-line {display:inline-flex;align-items:center;gap:8px;}
+.icon-mail {width:22px;height:22px;object-fit:contain;display:block;}
+
+/* ============ UTILITIES ============ */
+.tight-lines{line-height:1.35}
+.hide{display:none !important}
+
+/* =========================================================
+   NADPISANIA PER-SEKCJA (zmieniasz tylko liczby tutaj)
+   ========================================================= */
+
+/* O NAS */
+#o-nas{
+  --section-pt: 56px;
+  --section-pb: 48px;
+  --section-h2-mb: 14px;
+  --section-gap: 50px; /* używane w .o-nas-container */
+}
+
+/* OFERTA */
+#oferta{
+  --section-pt: 16px;
+  --section-pb: 56px;
+  --section-h2-mb: 14px;
+  --section-gap: 40px; /* używane w .oferta-container */
+}
+
+/* NASZ DZIEŃ */
+#nasz-dzien{
+  --section-pt: 48px;
+  --section-pb: 40px;
+  --section-h2-mb: 12px;
+}
+
+/* GALERIA */
+#galeria{
+  --section-pt: 40px;
+  --section-pb: 40px;
+  --section-h2-mb: 12px;
+}
+
+/* WSPÓŁPRACE */
+#wspolprace{
+  --section-pt: 44px;
+  --section-pb: 44px;
+  --section-h2-mb: 16px;
+  --stripe-h: 1.9em; /* niższy żółty pasek = ciaśniej wizualnie */
+}
+
+/* KONTAKT */
+#kontakt{
+  --section-pt: 50px;  /* wcześniej miałeś 60/72 — dostosuj */
+  --section-pb: 50px;
+  --section-h2-mb: 14px;
+}
+
+
+
+
+/* === MOBILE FIX: większy topbar + drobne zwężenie treści === */
+@media (max-width: 900px){
+  :root{ --topbar-h: 48px; }            /* rezerwujemy więcej miejsca */
+  .top-bar{
+    font-size: 12px;
+    padding: 6px 12px;
+    gap: 12px;
+    flex-wrap: wrap;                    /* pozwól się zawijać */
+    justify-content: center;            /* czytelniej w 2 liniach */
+  }
+  .nav-inner .logo img{ max-height: 48px; } /* odrobinę mniejsze logo */
+}
+
+@media (max-width: 600px){
+  :root{ --topbar-h: 64px; }            /* jeszcze więcej miejsca na 2–3 linie */
+  .top-bar span:nth-child(3){ display:none; } /* schowaj telefon, jeśli jest też w sekcji Kontakt */
+}
+
+/* Upewnij się, że warstwy są poprawne: topbar nad tłem, pod nav */
+.top-bar{ position: fixed; top:0; left:0; right:0; z-index: 900; }
+.nav-wrap{ position: fixed; top: var(--topbar-h); left:0; right:0; z-index: 1000; }
+
+/* Body ma już: padding-top: calc(var(--topbar-h) + var(--nav-h)); – zostaw */
