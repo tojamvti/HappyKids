@@ -1,0 +1,50 @@
+STRONA HAPPYKIDS NA GITHUB PAGES – INSTRUKCJA
+=====================================================================
+
+Ta wersja strony działa na GitHub Pages bez PHP. Po każdej zmianie
+w repozytorium GitHub sam przygotowuje zdjęcia (zmniejsza je, obraca,
+usuwa lokalizację GPS, robi miniatury) i publikuje stronę.
+Trwa to ok. 1–2 minuty.
+
+
+JEDNORAZOWE USTAWIENIE (robi się raz, przy podmianie strony)
+---------------------------------------------------------------------
+1) Wgraj całą zawartość paczki do repozytorium (razem z ukrytym
+   folderem .github – bez niego automatyczna publikacja nie działa).
+2) W repozytorium: Settings → Pages → Build and deployment → Source:
+   wybierz „GitHub Actions” (zamiast „Deploy from a branch”).
+3) W tym samym miejscu sprawdź, czy w „Custom domain” jest
+   happykidswroclaw.pl i zaznaczone „Enforce HTTPS”.
+4) Zakładka Actions: pierwsza publikacja powinna zakończyć się
+   zielonym znaczkiem. Potem otwórz stronę w trybie incognito.
+
+
+DODAWANIE ZDJĘĆ DO GALERII
+---------------------------------------------------------------------
+1) Na github.com otwórz repozytorium → folder galeria
+2) Add file → Upload files → przeciągnij zdjęcia (prosto z telefonu,
+   także HEIC z iPhone'a) → Commit changes
+3) Gotowe. Po 1–2 minutach zdjęcia są na stronie: najnowsze na
+   początku galerii, 3 najnowsze także na stronie głównej.
+
+- Najlepiej nazwy bez spacji i polskich znaków, np. dzien-dyni-1.jpg
+- Publikuj tylko zdjęcia dzieci, na które rodzice wyrazili zgodę.
+- Nie trzeba edytować pliku js/zdjecia-lista.js – tworzy się sam.
+
+USUNIĘCIE ZDJĘCIA
+- Otwórz zdjęcie w folderze galeria → menu „…” → Delete file → Commit.
+
+ZDJĘCIA W KWIATKU (góra strony głównej)
+- Folder kwiatek/, pliki 01.jpg, 02.jpg, 03.jpg… – pokazują się
+  w kolejności nazw. Zdjęcia kwadratowe, twarz na środku.
+
+GDY ZDJĘCIE SIĘ NIE POJAWIA
+- Zakładka Actions: czerwony znaczek = błąd publikacji. Kliknij go,
+  szczegóły są w kroku „Przygotowanie zdjęć i strony”.
+  Uszkodzony plik jest pomijany, reszta strony publikuje się normalnie.
+
+
+PRZENOSINY NA HOSTING Z PHP (np. cyberfolks) W PRZYSZŁOŚCI
+---------------------------------------------------------------------
+Strona jest na to gotowa – wystarczy postępować według INSTRUKCJA.txt.
+Folder .github, plik CNAME i ten plik można wtedy pominąć.

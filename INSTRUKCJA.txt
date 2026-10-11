@@ -1,0 +1,161 @@
+INSTRUKCJA WGRANIA NOWEJ STRONY – happykidswroclaw.pl
+Niepubliczny Punkt Przedszkolny „HappyKids”, Wrocław
+=====================================================================
+
+Ten plik jest dla osoby, która umieszcza stronę na serwerze, oraz dla osoby,
+która później dodaje zdjęcia. Wgranie zajmuje ok. 20–30 minut.
+
+
+1. WYMAGANIA SERWERA
+---------------------------------------------------------------------
+- PHP w wersji 7.4 lub nowszej (zalecane 8.x)
+- rozszerzenie PHP „GD” (zmniejszanie zdjęć) – na polskich hostingach
+  zwykle włączone; „exif” (obracanie zdjęć z telefonu) – mile widziane
+- serwer Apache (plik .htaccess). Na nginx strona też zadziała,
+  tylko ustawienia z .htaccess trzeba pominąć albo przenieść.
+
+Jak sprawdzić: w panelu hostingu sekcja „PHP” / „Wersja PHP”.
+Bez PHP strona też działa, ale galeria nie czyta zdjęć automatycznie
+(patrz punkt 6).
+
+
+2. CO JEST W PACZCE
+---------------------------------------------------------------------
+index.html                  strona główna
+podstrony/                  O nas, Oferta, Galeria, Polityka prywatności
+css/, js/                   wygląd i skrypty
+fonts/                      font Poppins (wgrany na serwer – bez Google)
+img/                        logo, ilustracje, logo partnerów, mapka
+karuzela/                   9 zdjęć do sekcji „Nasz dzień”
+kwiatek/                    zdjęcia zmieniające się w kwiatku na górze
+galeria/                    zdjęcia galerii (3 tymczasowe – do podmiany)
+dokumenty/                  standardy-happy-kids.pdf
+api/zdjecia.php             skrypt czytający zdjęcia z folderów
+.htaccess                   ustawienia serwera (plik ukryty – patrz uwaga)
+robots.txt, sitemap.xml     dla wyszukiwarek
+favicon.*, apple-touch-icon.png, icon-512.png   ikonki strony
+
+UWAGA: plik .htaccess zaczyna się od kropki i w niektórych programach
+jest ukryty. Upewnij się, że też został wgrany.
+
+
+3. WGRANIE – KROK PO KROKU
+---------------------------------------------------------------------
+1) KOPIA ZAPASOWA. Pobierz na dysk całą obecną zawartość katalogu
+   strony (zwykle public_html, www, htdocs lub folder z nazwą domeny).
+   Bez tego nie wgrywaj nowej wersji.
+
+2) Rozpakuj paczkę ZIP na komputerze.
+
+3) Wgraj CAŁĄ zawartość rozpakowanego folderu (nie sam folder!)
+   do katalogu strony na serwerze – przez menedżer plików w panelu
+   hostingu albo program FTP (np. FileZilla). Pliki o tych samych
+   nazwach (index.html, podstrony/o-nas.html, podstrony/oferta.html)
+   nadpisz.
+
+4) Stare foldery poprzedniej strony (media/, fotki/, naszdzien_zdj/,
+   wspolprace_biale/, icons/) nie są już używane. Można je usunąć
+   PO sprawdzeniu, że nowa strona działa (punkt 4).
+
+5) Uprawnienia: foldery galeria/ i kwiatek/ muszą mieć prawo zapisu
+   dla PHP (zwykle 755; jeśli zdjęcia się nie pokazują – 775).
+   Skrypt sam tworzy w nich podfoldery _min (miniatury) i _duze
+   (powiększenia). Tych podfolderów nie trzeba ruszać.
+
+6) Jeśli domena ma działający certyfikat SSL (adres z https://),
+   w pliku .htaccess usuń znak # z trzech ostatnich linii – strona
+   będzie zawsze otwierać się przez https.
+
+
+4. SPRAWDZENIE PO WGRANIU (lista kontrolna)
+---------------------------------------------------------------------
+Otwórz stronę na komputerze i na telefonie (najlepiej w trybie
+incognito, żeby nie widzieć starej wersji z pamięci przeglądarki):
+
+[ ] strona główna się otwiera, w kwiatku zmieniają się zdjęcia
+[ ] menu przewija do sekcji; na telefonie działa przycisk ☰
+[ ] przy przewijaniu rysuje się przerywana linia (komputer)
+[ ] karuzela „Nasz dzień” – strzałki, kropki, przesuwanie palcem
+[ ] w sekcji Galeria są zdjęcia; „Więcej” otwiera podstronę Galeria,
+    kliknięcie zdjęcia je powiększa
+[ ] kliknięcie logo partnera otwiera okienko z opisem
+[ ] „Więcej” przy haśle → O nas; „Więcej” w Ofercie → Oferta;
+    na podstronach działa „← Wróć”
+[ ] na stronie O nas pobiera się PDF „Standardy Happy Kids”
+[ ] telefon i e-mail w Kontakcie są klikalne, przycisk Facebooka
+    otwiera profil, mapka otwiera trasę w Mapach Google
+[ ] w karcie przeglądarki widać ikonkę „K” z uśmiechem
+[ ] adres  https://happykidswroclaw.pl/api/zdjecia.php?folder=galeria
+    pokazuje listę plików (tekst w nawiasach [ ]), a nie błąd
+
+Jeśli adres z ostatniego punktu pokazuje błąd lub pustą stronę:
+sprawdź wersję PHP, rozszerzenie GD i uprawnienia folderu galeria/.
+
+
+5. CODZIENNA OBSŁUGA (dla osoby bez doświadczenia z kodem)
+---------------------------------------------------------------------
+DODANIE ZDJĘĆ DO GALERII
+- W panelu hostingu otwórz menedżer plików → folder galeria/
+- Wgraj zdjęcia (mogą być prosto z telefonu, JPG/PNG/WEBP).
+  Najlepiej nazwy bez spacji i polskich znaków, np. dzien-dziecka-1.jpg
+- Gotowe. Najnowsze zdjęcia pokazują się na początku galerii,
+  a 3 najnowsze także na stronie głównej.
+- Publikuj tylko zdjęcia dzieci, na które rodzice wyrazili zgodę.
+
+USUNIĘCIE ZDJĘCIA
+- Skasuj plik z folderu galeria/. Kopie w _min i _duze można zostawić
+  albo też usunąć.
+
+ZDJĘCIA W KWIATKU (góra strony głównej)
+- Folder kwiatek/, pliki nazwane kolejno: 01.jpg, 02.jpg, 03.jpg…
+  Pokazują się w kolejności nazw. Można dodać więcej (04.jpg itd.).
+- Zdjęcia kwadratowe, min. 1000×1000 px, twarz / najważniejszy
+  element na środku (brzegi zasłaniają płatki kwiatka).
+- Podmiana: wgraj nowy plik pod tą samą nazwą.
+
+PODMIANA PDF „Standardy Happy Kids”
+- Wgraj nowy plik do folderu dokumenty/ pod dokładnie tą samą nazwą:
+  standardy-happy-kids.pdf
+
+ZDJĘCIA KARUZELI „Nasz dzień”
+- Folder karuzela/, pliki 01.webp … 09.webp (kolejno pory dnia).
+  Podmiana: nowy plik pod tą samą nazwą, kwadratowy, min. 640×640 px.
+
+ZMIANA TEKSTÓW
+- Teksty są w plikach index.html i podstrony/*.html. Zmiany najlepiej
+  zlecić osobie, która zna HTML, albo przesłać nowe teksty.
+
+
+6. GDY SERWER NIE MA PHP
+---------------------------------------------------------------------
+Strona działa, ale galeria i kwiatek biorą zdjęcia z listy w pliku
+js/zdjecia-lista.js. Po dodaniu zdjęcia trzeba dopisać jego nazwę
+do tej listy (w cudzysłowie, oddzielone przecinkami, najnowsze
+na początku).
+
+
+7. NIE USUWAĆ
+---------------------------------------------------------------------
+api/, js/, css/, fonts/, img/, .htaccess, js/zdjecia-lista.js
+(lista zapasowa), podfoldery _min i _duze (tworzą się same).
+
+
+8. DO UZUPEŁNIENIA
+---------------------------------------------------------------------
+- podstrony/polityka-prywatnosci.html – dane administratora
+  (miejsca w nawiasach kwadratowych, podświetlone na żółto):
+  imię i nazwisko / nazwa firmy, NIP, nazwa firmy hostingowej,
+  okres przechowywania korespondencji, data aktualizacji.
+  Tekst warto dać do sprawdzenia osobie znającej RODO.
+- galeria/ – 3 tymczasowe zdjęcia z projektu do zastąpienia
+  prawdziwymi zdjęciami.
+- opis partnera eMski Sport (logo na razie nie otwiera okienka).
+
+
+9. PO PUBLIKACJI (zalecane)
+---------------------------------------------------------------------
+- Google Search Console (search.google.com/search-console): dodaj
+  domenę i zgłoś mapę strony: https://happykidswroclaw.pl/sitemap.xml
+- Profil Firmy w Google: sprawdź adres strony, godziny i zdjęcia.
+- Stara strona nie miała adresów, które przestają działać – podstrony
+  o-nas.html i oferta.html zachowały swoje adresy.

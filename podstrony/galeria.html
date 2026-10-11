@@ -1,41 +1,45 @@
-<!DOCTYPE html>
-<html lang="pl">
+<!doctype html>
+<html lang="pl" data-root="../">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeria – HappyKids</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galeria zdjęć | HappyKids Wrocław</title>
+<meta name="description" content="Zdjęcia z życia przedszkola HappyKids na Muchoborze Wielkim we Wrocławiu: zajęcia, zabawy, wycieczki i uroczystości.">
+<link rel="canonical" href="https://happykidswroclaw.pl/podstrony/galeria.html">
+<meta name="theme-color" content="#FFE02D">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-  <header class="nav-wrap">
-    <div class="nav-inner">
-      <div class="logo">
-        <a href="../index.html#galeria">
-          <img src="../media/logo HappyKids_v3.png" alt="HappyKids logo" />
-        </a>
-      </div>
-      <div class="page-title">Galeria</div>
-    </div>
-  </header>
+<body class="sub">
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="sub-hdr">
+  <a class="logo-sub" href="../index.html" aria-label="HappyKids – strona główna"><img src="../img/logo.svg" alt="HappyKids" width="150" height="97"></a>
+  <a class="back" href="../index.html#galeria">← Wróć</a>
+</header>
+<div class="sub-band">
+  <h1>Galeria</h1>
+  <p>Zobacz, jak wygląda nasz dzień: zajęcia, zabawy i wspólne świętowanie.</p>
+  <svg viewBox="0 125 1635 230" preserveAspectRatio="none" aria-hidden="true"><g fill="#fff"><circle cx="55" cy="333" r="200"/><circle cx="325" cy="470" r="195"/><circle cx="582" cy="352" r="192"/><circle cx="955" cy="408" r="198"/><circle cx="1237" cy="433" r="188"/><circle cx="1575" cy="326" r="193"/><rect x="0" y="345" width="1635" height="10"/></g></svg>
+</div>
+<main class="sub-main" id="tresc">
+  <div class="g-grid" id="g-grid" aria-live="polite"><p class="g-empty">Ładowanie zdjęć…</p></div>
+</main>
 
-  <main class="page-content">
-    <section class="section">
-      <div class="container">
-        <h1>Nasze chwile</h1>
-        <div class="gallery-grid">
-          <!-- Podmień pliki na własne -->
-          <img src="../media/gal1.jpg" alt="Zdjęcie 1" />
-          <img src="../media/gal2.jpg" alt="Zdjęcie 2" />
-          <img src="../media/gal3.jpg" alt="Zdjęcie 3" />
-          <img src="../media/gal4.jpg" alt="Zdjęcie 4" />
-          <img src="../media/gal5.jpg" alt="Zdjęcie 5" />
-          <img src="../media/gal6.jpg" alt="Zdjęcie 6" />
-        </div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie" hidden>
+  <button class="lb-prev" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 L8 12 L15 19"/></svg></button>
+  <figure><img id="lb-img" alt=""></figure>
+  <button class="lb-next" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5 L16 12 L9 19"/></svg></button>
+  <button class="lb-close" type="button" aria-label="Zamknij"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6 L18 18 M18 6 L6 18"/></svg></button>
+  <p class="lb-count" id="lb-count"></p>
+</div>
+<footer class="ftr">
+  <p>© <span data-year>2026</span> Niepubliczny Punkt Przedszkolny „HappyKids” <span class="sep">·</span> ul. Trawowa 34, 54-614 Wrocław <span class="sep">·</span> <a href="polityka-prywatnosci.html">Polityka prywatności</a></p>
+</footer>
 
-        <a href="../index.html#galeria" class="btn-back">← Wróć</a>
-      </div>
-    </section>
-  </main>
+<script src="../js/zdjecia-lista.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/galeria.js"></script>
 </body>
 </html>

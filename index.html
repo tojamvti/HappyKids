@@ -1,315 +1,230 @@
-<!DOCTYPE html>
-<html lang="pl">
+<!doctype html>
+<html lang="pl" data-root="">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HappyKids</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Przedszkole HappyKids Wrocław – Muchobór Wielki, ul. Trawowa</title>
+<meta name="description" content="Kameralny punkt przedszkolny na Muchoborze Wielkim we Wrocławiu, od 2008 roku. Do 15 dzieci, 4 posiłki, angielski, rytmika, sport. Czynne 7:00–17:00.">
+<link rel="canonical" href="https://happykidswroclaw.pl/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Przedszkole HappyKids Wrocław – Muchobór Wielki">
+<meta property="og:description" content="Kameralny punkt przedszkolny na Muchoborze Wielkim we Wrocławiu, od 2008 roku. Czynne 7:00–17:00.">
+<meta property="og:url" content="https://happykidswroclaw.pl/">
+<meta property="og:image" content="https://happykidswroclaw.pl/kwiatek/01.jpg">
+<meta name="theme-color" content="#FFE02D">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/poppins-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ChildCare",
+  "name": "Niepubliczny Punkt Przedszkolny „HappyKids”",
+  "url": "https://happykidswroclaw.pl/",
+  "telephone": "+48 455 401 606",
+  "email": "przedszkolehappykids.wroc@gmail.com",
+  "foundingDate": "2008",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Trawowa 34",
+    "postalCode": "54-614",
+    "addressLocality": "Wrocław",
+    "addressCountry": "PL"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "07:00",
+    "closes": "17:00"
+  }],
+  "sameAs": ["https://www.facebook.com/profile.php?id=100063485363954"]
+}
+</script>
 </head>
-<body>
+<body class="home">
+<a class="skip" href="#tresc">Przejdź do treści</a>
 
-  <!-- NAVBAR -->
-  <header class="nav-wrap">
-    <div class="nav-inner">
-      <div class="logo">
-        <a href="#o-nas">
-          <img src="media/logo HappyKids_v3.png" alt="HappyKids logo" />
-        </a>
-      </div>
+<div class="site">
 
-      <!-- HAMBURGER -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Otwórz menu" />
-      <label for="nav-toggle" class="hamburger" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </label>
-
-      <nav class="main-nav" role="navigation">
-        <a href="#o-nas">O nas</a>
-        <a href="#oferta">Oferta</a>
-        <a href="#nasz-dzien">Nasz dzień</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#wspolprace">Współprace</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
-
-<!-- TOP BAR -->
-<div class="top-bar">
-  <div class="container">
-    <span>Niepubliczny Punkt Przedszkolny</span>
-    <span>📞 +48 455 401 606</span>
-    <span>ul. Trawowa 34, 54-614 Wrocław</span>
-    
-  </div>
-</div>
+  <!-- ===== NAGŁÓWEK ===== -->
+  <header class="hdr">
+    <p class="topbar">
+      <span>Niepubliczny Punkt Przedszkolny</span>
+      <span>ul. Trawowa 34, 54-614 Wrocław,</span>
+      <a href="tel:+48455401606">tel +48 455 401 606</a>
+    </p>
+    <a class="logo" href="#start" aria-label="HappyKids – strona główna"><img src="img/logo.svg" alt="HappyKids" width="178" height="115"></a>
+    <a class="hdr-tel" href="tel:+48455401606" aria-label="Zadzwoń: +48 455 401 606"><img src="img/doodle/sluchawka.svg" alt=""></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="menu" aria-label="Menu główne">
+      <ul>
+        <li><a href="#o-nas">O nas</a></li>
+        <li><a href="#oferta">Oferta</a></li>
+        <li><a href="#nasz-dzien">Nasz dzień</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#wspolpraca">Współpraca</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- O NAS -->
-  <section id="o-nas" class="section yellow">
-    <div class="o-nas-container">
-      <div class="text-content">
-        <h2>O nas</h2>
-        <p>Witamy w naszym przedszkolu!<br>Łączymy naukę i zabawę w ciepłej, bezpiecznej atmosferze.</p>
-        <p>Nasz zespół tworzą doświadczeni pedagodzy, którzy z pasją dbają o rozwój emocjonalny i społeczny najmłodszych.</p>
-        <a href="podstrony/o-nas.html" class="btn-more">Więcej</a>
+  <!-- linia przerywana (komputer) -->
+  <svg class="trail" viewBox="0 0 1182 2560" aria-hidden="true" focusable="false"><defs><mask id="tm0" maskUnits="userSpaceOnUse" x="0" y="0" width="1182" height="2560"><rect width="1182" height="2560" fill="#000"/><path class="rev" d="M 899.4162049445649,559.0591748470619 C 772.4003635620627,684.795940314642 556.7172109966184,488.3955532066776 496.3656271261527,603.4526079940958 C 462.12373310670404,668.7329741513192 558.8651086437633,758.016076043622 455.241944381349,834.5100565279529"/></mask><mask id="tm1" maskUnits="userSpaceOnUse" x="0" y="0" width="1182" height="2560"><rect width="1182" height="2560" fill="#000"/><path class="rev" d="M 236.5556746964745,994.0180832256817 C 126.18829197356229,1082.2866044146629 131.9457713319597,1311.5646470822426 281.1464556639288,1366.210340443632 C 491.1278120734179,1443.1170317225346 604.6060842974751,1264.2740496669664 791.3708207710689,1380.2433263296875"/></mask><mask id="tm2" maskUnits="userSpaceOnUse" x="0" y="0" width="1182" height="2560"><rect width="1182" height="2560" fill="#000"/><path class="rev" d="M 964.7558278556343,1558.8964294837986 C 1008.2026465611513,1657.741483654299 966.5589809700124,1748.322495485879 905.0241290476503,1777.472651964364 C 838.077361170282,1809.1866923670625 717.5461562604222,1790.496789241467 709.154370104135,1743.9800245660126 C 700.8534785871283,1697.9627709712895 775.7064423406629,1710.7584433442546 748.7082778624437,1748.2725443778058 C 710.5685596720417,1801.269851172782 502.15861599029597,1688.2927277707042 394.81450361174495,1716.9834978290414"/></mask><mask id="tm3" maskUnits="userSpaceOnUse" x="0" y="0" width="1182" height="2560"><rect width="1182" height="2560" fill="#000"/><path class="rev" d="M 266.02665076470123,1753.0662130115788 C 187.33891587827293,1787.1918274023983 183.48776733289628,1887.7090153874126 223.76146236983254,1928.7786526710224"/></mask><mask id="tm4" maskUnits="userSpaceOnUse" x="0" y="0" width="1182" height="2560"><rect width="1182" height="2560" fill="#000"/><path class="rev" d="M 292.5858396185447,2001.638852040208 C 485.60241472137704,2140.265345822486 692.5691326155772,1966.8201262318557 805.8000413284531,2000.2134392780067 C 925.6219038567572,2035.5511126378394 907.8422158796566,2141.8073554110415 854.2627182780454,2189.843474966595"/></mask><mask id="tm5" maskUnits="userSpaceOnUse" x="0" y="0" width="1182" height="2560"><rect width="1182" height="2560" fill="#000"/><path class="rev" d="M 661.5300539214977,2428.000302106337 C 629.6753684930131,2442.80907514711 628.9983932511341,2467.996305025796 641.6506366674744,2479.717933094874 C 655.0037094003802,2492.089139962334 682.6641221319123,2489.9932048315536 683.0491833733523,2465.6878874391305 C 683.4268973013928,2441.8424295513437 652.7756860749818,2440.663208672518 649.4018998566532,2457.358942259615 C 646.1477658478539,2473.460459260038 666.7103792383782,2479.682332897569 670.0502013891128,2468.94876579741"/></mask></defs><path class="dash" mask="url(#tm0)" d="M 899.4162049445649,559.0591748470619 C 772.4003635620627,684.795940314642 556.7172109966184,488.3955532066776 496.3656271261527,603.4526079940958 C 462.12373310670404,668.7329741513192 558.8651086437633,758.016076043622 455.241944381349,834.5100565279529"/><path class="dash" mask="url(#tm1)" d="M 236.5556746964745,994.0180832256817 C 126.18829197356229,1082.2866044146629 131.9457713319597,1311.5646470822426 281.1464556639288,1366.210340443632 C 491.1278120734179,1443.1170317225346 604.6060842974751,1264.2740496669664 791.3708207710689,1380.2433263296875"/><path class="dash" mask="url(#tm2)" d="M 964.7558278556343,1558.8964294837986 C 1008.2026465611513,1657.741483654299 966.5589809700124,1748.322495485879 905.0241290476503,1777.472651964364 C 838.077361170282,1809.1866923670625 717.5461562604222,1790.496789241467 709.154370104135,1743.9800245660126 C 700.8534785871283,1697.9627709712895 775.7064423406629,1710.7584433442546 748.7082778624437,1748.2725443778058 C 710.5685596720417,1801.269851172782 502.15861599029597,1688.2927277707042 394.81450361174495,1716.9834978290414"/><path class="dash" mask="url(#tm3)" d="M 266.02665076470123,1753.0662130115788 C 187.33891587827293,1787.1918274023983 183.48776733289628,1887.7090153874126 223.76146236983254,1928.7786526710224"/><path class="dash" mask="url(#tm4)" d="M 292.5858396185447,2001.638852040208 C 485.60241472137704,2140.265345822486 692.5691326155772,1966.8201262318557 805.8000413284531,2000.2134392780067 C 925.6219038567572,2035.5511126378394 907.8422158796566,2141.8073554110415 854.2627182780454,2189.843474966595"/><path class="dash" mask="url(#tm5)" d="M 661.5300539214977,2428.000302106337 C 629.6753684930131,2442.80907514711 628.9983932511341,2467.996305025796 641.6506366674744,2479.717933094874 C 655.0037094003802,2492.089139962334 682.6641221319123,2489.9932048315536 683.0491833733523,2465.6878874391305 C 683.4268973013928,2441.8424295513437 652.7756860749818,2440.663208672518 649.4018998566532,2457.358942259615 C 646.1477658478539,2473.460459260038 666.7103792383782,2479.682332897569 670.0502013891128,2468.94876579741"/></svg>
+
+  <main id="tresc">
+
+    <!-- ===== HERO / O NAS ===== -->
+    <section class="hero">
+      <span id="start" class="anchor-top"></span>
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-band" viewBox="-1182 0 3546 480" preserveAspectRatio="xMidYMin slice">
+          <path d="M0.0,141.5 L228.0,141.5 L240.0,151.0 L244.0,153.0 L245.0,154.0 L254.0,158.5 L255.0,158.5 L262.0,161.5 L264.0,161.5 L271.0,163.5 L273.0,163.5 L277.0,164.5 L281.0,164.5 L282.0,165.0 L291.0,165.0 L292.0,164.5 L300.0,164.0 L314.0,160.5 L317.0,159.0 L318.0,159.0 L330.0,153.0 L340.0,146.0 L344.0,142.0 L345.0,141.5 L1181.0,141.5 L1181.0,414.2 L1180.0,414.2 L1171.0,409.8 L1170.0,409.8 L1167.0,408.2 L1166.0,408.2 L1163.0,406.8 L1161.0,406.8 L1157.0,405.2 L1149.0,404.2 L1148.0,403.8 L1130.0,403.8 L1129.0,404.2 L1123.0,404.8 L1115.0,406.8 L1113.0,407.8 L1112.0,407.8 L1109.0,409.2 L1108.0,409.2 L1101.0,412.8 L1100.0,412.8 L1091.0,418.2 L1084.0,423.8 L1075.0,432.8 L1070.0,439.2 L1066.0,445.8 L1060.0,458.2 L1058.0,458.2 L1052.0,455.8 L1046.0,454.2 L1038.0,453.2 L1037.0,452.8 L1031.0,452.8 L1030.0,452.2 L1027.0,452.2 L1026.0,452.8 L1020.0,452.8 L1016.0,453.8 L1014.0,453.8 L1013.0,454.2 L1011.0,454.2 L1003.0,456.2 L1000.0,457.8 L996.0,458.8 L995.0,456.8 L992.0,446.8 L990.0,441.8 L986.0,433.8 L982.0,427.2 L976.0,419.8 L969.0,412.8 L960.0,405.8 L958.0,404.8 L957.0,403.8 L945.0,397.8 L944.0,397.8 L938.0,395.2 L928.0,392.8 L923.0,392.2 L922.0,391.8 L905.0,391.8 L901.0,392.8 L899.0,392.8 L898.0,393.2 L896.0,393.2 L888.0,395.2 L885.0,396.8 L881.0,397.8 L872.0,402.2 L572.0,470.8 L570.0,474.2 L523.0,411.8 L518.0,409.2 L517.0,409.2 L511.0,406.8 L509.0,406.8 L505.0,405.2 L497.0,404.2 L496.0,403.8 L478.0,403.8 L474.0,404.8 L472.0,404.8 L471.0,405.2 L469.0,405.2 L467.0,406.2 L463.0,406.8 L457.0,409.2 L456.0,409.2 L443.0,415.8 L431.0,424.8 L422.0,434.2 L415.0,444.2 L413.0,447.8 L408.0,458.8 L402.0,456.2 L394.0,454.2 L386.0,453.2 L385.0,452.8 L379.0,452.8 L378.0,452.2 L375.0,452.2 L374.0,452.8 L368.0,452.8 L364.0,453.8 L362.0,453.8 L361.0,454.2 L359.0,454.2 L351.0,456.2 L348.0,457.8 L344.0,458.8 L340.0,446.2 L338.0,441.2 L332.0,430.2 L326.0,421.8 L322.0,417.8 L321.0,416.2 L320.0,415.8 L315.0,410.8 L309.0,406.2 L302.0,402.2 L301.0,401.2 L300.0,401.2 L292.0,397.2 L291.0,397.2 L285.0,394.8 L281.0,394.2 L279.0,393.2 L271.0,392.2 L270.0,391.8 L253.0,391.8 L249.0,392.8 L247.0,392.8 L246.0,393.2 L244.0,393.2 L236.0,395.2 L232.0,397.2 L228.0,398.2 L221.0,401.8 L220.0,402.8 L213.0,406.8 L209.0,409.8 L199.0,419.2 L196.0,422.8 L190.0,431.2 L188.0,434.8 L184.0,442.8 L182.0,448.2 L177.0,466.2 L171.0,460.2 L164.0,454.8 L158.0,451.2 L157.0,450.2 L149.0,446.2 L148.0,446.2 L145.0,444.8 L144.0,444.8 L141.0,443.2 L133.0,441.2 L125.0,440.2 L124.0,439.8 L108.0,439.8 L107.0,440.2 L101.0,440.8 L89.0,443.8 L85.0,445.8 L84.0,445.8 L72.0,451.8 L64.0,457.8 L62.0,458.2 L59.0,454.2 L55.0,450.2 L54.0,448.8 L53.0,448.2 L49.0,444.2 L41.0,438.2 L37.0,436.2 L36.0,435.2 L27.0,430.8 L23.0,429.8 L20.0,428.2 L12.0,426.2 L4.0,425.2 L3.0,424.8 L0.0,424.8 Z" fill="var(--yellow)"/>
+          <path d="M0.0,141.5 L228.0,141.5 L240.0,151.0 L244.0,153.0 L245.0,154.0 L254.0,158.5 L255.0,158.5 L262.0,161.5 L264.0,161.5 L271.0,163.5 L273.0,163.5 L277.0,164.5 L281.0,164.5 L282.0,165.0 L291.0,165.0 L292.0,164.5 L300.0,164.0 L314.0,160.5 L317.0,159.0 L318.0,159.0 L330.0,153.0 L340.0,146.0 L344.0,142.0 L345.0,141.5 L1181.0,141.5 L1181.0,414.2 L1180.0,414.2 L1171.0,409.8 L1170.0,409.8 L1167.0,408.2 L1166.0,408.2 L1163.0,406.8 L1161.0,406.8 L1157.0,405.2 L1149.0,404.2 L1148.0,403.8 L1130.0,403.8 L1129.0,404.2 L1123.0,404.8 L1115.0,406.8 L1113.0,407.8 L1112.0,407.8 L1109.0,409.2 L1108.0,409.2 L1101.0,412.8 L1100.0,412.8 L1091.0,418.2 L1084.0,423.8 L1075.0,432.8 L1070.0,439.2 L1066.0,445.8 L1060.0,458.2 L1058.0,458.2 L1052.0,455.8 L1046.0,454.2 L1038.0,453.2 L1037.0,452.8 L1031.0,452.8 L1030.0,452.2 L1027.0,452.2 L1026.0,452.8 L1020.0,452.8 L1016.0,453.8 L1014.0,453.8 L1013.0,454.2 L1011.0,454.2 L1003.0,456.2 L1000.0,457.8 L996.0,458.8 L995.0,456.8 L992.0,446.8 L990.0,441.8 L986.0,433.8 L982.0,427.2 L976.0,419.8 L969.0,412.8 L960.0,405.8 L958.0,404.8 L957.0,403.8 L945.0,397.8 L944.0,397.8 L938.0,395.2 L928.0,392.8 L923.0,392.2 L922.0,391.8 L905.0,391.8 L901.0,392.8 L899.0,392.8 L898.0,393.2 L896.0,393.2 L888.0,395.2 L885.0,396.8 L881.0,397.8 L872.0,402.2 L572.0,470.8 L570.0,474.2 L523.0,411.8 L518.0,409.2 L517.0,409.2 L511.0,406.8 L509.0,406.8 L505.0,405.2 L497.0,404.2 L496.0,403.8 L478.0,403.8 L474.0,404.8 L472.0,404.8 L471.0,405.2 L469.0,405.2 L467.0,406.2 L463.0,406.8 L457.0,409.2 L456.0,409.2 L443.0,415.8 L431.0,424.8 L422.0,434.2 L415.0,444.2 L413.0,447.8 L408.0,458.8 L402.0,456.2 L394.0,454.2 L386.0,453.2 L385.0,452.8 L379.0,452.8 L378.0,452.2 L375.0,452.2 L374.0,452.8 L368.0,452.8 L364.0,453.8 L362.0,453.8 L361.0,454.2 L359.0,454.2 L351.0,456.2 L348.0,457.8 L344.0,458.8 L340.0,446.2 L338.0,441.2 L332.0,430.2 L326.0,421.8 L322.0,417.8 L321.0,416.2 L320.0,415.8 L315.0,410.8 L309.0,406.2 L302.0,402.2 L301.0,401.2 L300.0,401.2 L292.0,397.2 L291.0,397.2 L285.0,394.8 L281.0,394.2 L279.0,393.2 L271.0,392.2 L270.0,391.8 L253.0,391.8 L249.0,392.8 L247.0,392.8 L246.0,393.2 L244.0,393.2 L236.0,395.2 L232.0,397.2 L228.0,398.2 L221.0,401.8 L220.0,402.8 L213.0,406.8 L209.0,409.8 L199.0,419.2 L196.0,422.8 L190.0,431.2 L188.0,434.8 L184.0,442.8 L182.0,448.2 L177.0,466.2 L171.0,460.2 L164.0,454.8 L158.0,451.2 L157.0,450.2 L149.0,446.2 L148.0,446.2 L145.0,444.8 L144.0,444.8 L141.0,443.2 L133.0,441.2 L125.0,440.2 L124.0,439.8 L108.0,439.8 L107.0,440.2 L101.0,440.8 L89.0,443.8 L85.0,445.8 L84.0,445.8 L72.0,451.8 L64.0,457.8 L62.0,458.2 L59.0,454.2 L55.0,450.2 L54.0,448.8 L53.0,448.2 L49.0,444.2 L41.0,438.2 L37.0,436.2 L36.0,435.2 L27.0,430.8 L23.0,429.8 L20.0,428.2 L12.0,426.2 L4.0,425.2 L3.0,424.8 L0.0,424.8 Z" fill="var(--yellow)" transform="translate(0 0) scale(-1 1)"/>
+          <path d="M0.0,141.5 L228.0,141.5 L240.0,151.0 L244.0,153.0 L245.0,154.0 L254.0,158.5 L255.0,158.5 L262.0,161.5 L264.0,161.5 L271.0,163.5 L273.0,163.5 L277.0,164.5 L281.0,164.5 L282.0,165.0 L291.0,165.0 L292.0,164.5 L300.0,164.0 L314.0,160.5 L317.0,159.0 L318.0,159.0 L330.0,153.0 L340.0,146.0 L344.0,142.0 L345.0,141.5 L1181.0,141.5 L1181.0,414.2 L1180.0,414.2 L1171.0,409.8 L1170.0,409.8 L1167.0,408.2 L1166.0,408.2 L1163.0,406.8 L1161.0,406.8 L1157.0,405.2 L1149.0,404.2 L1148.0,403.8 L1130.0,403.8 L1129.0,404.2 L1123.0,404.8 L1115.0,406.8 L1113.0,407.8 L1112.0,407.8 L1109.0,409.2 L1108.0,409.2 L1101.0,412.8 L1100.0,412.8 L1091.0,418.2 L1084.0,423.8 L1075.0,432.8 L1070.0,439.2 L1066.0,445.8 L1060.0,458.2 L1058.0,458.2 L1052.0,455.8 L1046.0,454.2 L1038.0,453.2 L1037.0,452.8 L1031.0,452.8 L1030.0,452.2 L1027.0,452.2 L1026.0,452.8 L1020.0,452.8 L1016.0,453.8 L1014.0,453.8 L1013.0,454.2 L1011.0,454.2 L1003.0,456.2 L1000.0,457.8 L996.0,458.8 L995.0,456.8 L992.0,446.8 L990.0,441.8 L986.0,433.8 L982.0,427.2 L976.0,419.8 L969.0,412.8 L960.0,405.8 L958.0,404.8 L957.0,403.8 L945.0,397.8 L944.0,397.8 L938.0,395.2 L928.0,392.8 L923.0,392.2 L922.0,391.8 L905.0,391.8 L901.0,392.8 L899.0,392.8 L898.0,393.2 L896.0,393.2 L888.0,395.2 L885.0,396.8 L881.0,397.8 L872.0,402.2 L572.0,470.8 L570.0,474.2 L523.0,411.8 L518.0,409.2 L517.0,409.2 L511.0,406.8 L509.0,406.8 L505.0,405.2 L497.0,404.2 L496.0,403.8 L478.0,403.8 L474.0,404.8 L472.0,404.8 L471.0,405.2 L469.0,405.2 L467.0,406.2 L463.0,406.8 L457.0,409.2 L456.0,409.2 L443.0,415.8 L431.0,424.8 L422.0,434.2 L415.0,444.2 L413.0,447.8 L408.0,458.8 L402.0,456.2 L394.0,454.2 L386.0,453.2 L385.0,452.8 L379.0,452.8 L378.0,452.2 L375.0,452.2 L374.0,452.8 L368.0,452.8 L364.0,453.8 L362.0,453.8 L361.0,454.2 L359.0,454.2 L351.0,456.2 L348.0,457.8 L344.0,458.8 L340.0,446.2 L338.0,441.2 L332.0,430.2 L326.0,421.8 L322.0,417.8 L321.0,416.2 L320.0,415.8 L315.0,410.8 L309.0,406.2 L302.0,402.2 L301.0,401.2 L300.0,401.2 L292.0,397.2 L291.0,397.2 L285.0,394.8 L281.0,394.2 L279.0,393.2 L271.0,392.2 L270.0,391.8 L253.0,391.8 L249.0,392.8 L247.0,392.8 L246.0,393.2 L244.0,393.2 L236.0,395.2 L232.0,397.2 L228.0,398.2 L221.0,401.8 L220.0,402.8 L213.0,406.8 L209.0,409.8 L199.0,419.2 L196.0,422.8 L190.0,431.2 L188.0,434.8 L184.0,442.8 L182.0,448.2 L177.0,466.2 L171.0,460.2 L164.0,454.8 L158.0,451.2 L157.0,450.2 L149.0,446.2 L148.0,446.2 L145.0,444.8 L144.0,444.8 L141.0,443.2 L133.0,441.2 L125.0,440.2 L124.0,439.8 L108.0,439.8 L107.0,440.2 L101.0,440.8 L89.0,443.8 L85.0,445.8 L84.0,445.8 L72.0,451.8 L64.0,457.8 L62.0,458.2 L59.0,454.2 L55.0,450.2 L54.0,448.8 L53.0,448.2 L49.0,444.2 L41.0,438.2 L37.0,436.2 L36.0,435.2 L27.0,430.8 L23.0,429.8 L20.0,428.2 L12.0,426.2 L4.0,425.2 L3.0,424.8 L0.0,424.8 Z" fill="var(--yellow)" transform="translate(2364 0) scale(-1 1)"/>
+        </svg>
+        <svg class="hero-clouds-m" viewBox="0 125 1635 230" preserveAspectRatio="none"><g fill="#fff"><circle cx="55" cy="333" r="200"/><circle cx="325" cy="470" r="195"/><circle cx="582" cy="352" r="192"/><circle cx="955" cy="408" r="198"/><circle cx="1237" cy="433" r="188"/><circle cx="1575" cy="326" r="193"/><rect x="0" y="345" width="1635" height="10"/></g></svg>
       </div>
 
-      <div class="o-nas-img">
-        <img src="media/girl_01.png" alt="Dziecko w przedszkolu" />
+      <div class="hero-txt" id="o-nas">
+        <h1>Zabawa,<br>nauka,<br>zaufanie.</h1>
+        <p>Tworzymy bezpieczną przestrzeń,<br class="d"> w której poprzez pasję, mądrą naukę i&nbsp;radość<br class="d"> wspieramy rozwój każdego malucha.</p>
+        <a class="btn" href="podstrony/o-nas.html">Więcej<span class="sr"> o przedszkolu</span></a>
       </div>
-    </div>
-  </section>
 
-  <!-- CHMURKA -->
-  <div class="cloud-divider">
-    <img src="media/kolka.png" alt="Dekoracyjna chmurka" />
-  </div>
+      <div class="flower" role="img" aria-label="Zdjęcia z przedszkola HappyKids">
+        <svg viewBox="490.56 138.01 422.45 422.45" aria-hidden="true">
+          <defs><clipPath id="kwiatek-ksztalt"><path d="M 701.7827427225249,138.01414980696154 C 724.4404350155086,138.01414980696154 742.8355193404283,164.00868760928552 742.8355193404283,196.0267804731534 C 758.8444360047062,168.29828724982144 787.7725014411648,154.98412573242695 807.3944091869952,166.31284211126263 C 827.0165764681379,177.64181802541066 829.9501041022728,209.35106386772486 813.9411874379949,237.07955709105704 C 841.6694211260145,221.07064042677894 873.3789265036411,224.00390852560167 884.707642882477,243.6260758067442 C 896.036618796625,263.248243087887 882.722197743918,292.17604898903346 854.9939640558983,308.1852251886237 C 887.0117973844541,308.1852251886237 913.0063351867781,326.58030951354317 913.0063351867781,349.2380018065271 C 913.0063351867781,371.8956940995108 887.0117973844541,390.2907784244305 854.9939640558983,390.2907784244305 C 882.722197743918,406.2996950887084 896.036618796625,435.227760525167 884.707642882477,454.8496682709974 C 873.3789265036411,474.4718355521404 841.6694211260145,477.40536318627505 813.9411874379949,461.3961869866848 C 829.9501041022728,489.1246802100168 827.0165764681379,520.8341855876433 807.3944091869952,532.1629019664792 C 787.7725014411648,543.4918778806273 758.8444360047062,530.1774568279202 742.8355193404283,502.4492231399006 C 742.8355193404283,534.4670564684563 724.4404350155086,560.4615942707803 701.7827427225249,560.4615942707803 C 679.1250504295409,560.4615942707803 660.7299661046212,534.4670564684563 660.7299661046212,502.4492231399006 C 644.7207899050312,530.1774568279202 615.7929840038847,543.4918778806273 596.170816722742,532.1629019664792 C 576.5486494415992,520.8341855876433 573.6153813427767,489.1246802100168 589.6242980070546,461.3961869866848 C 561.8960643190347,477.40536318627505 530.1865589414083,474.4718355521404 518.8575830272603,454.8496682709974 C 507.52886664842447,435.227760525167 520.8430281658192,406.2996950887084 548.571521389151,390.2907784244305 C 516.553428525283,390.2907784244305 490.5591502582714,371.8956940995108 490.5591502582714,349.2380018065271 C 490.5591502582714,326.58030951354317 516.553428525283,308.1852251886237 548.571521389151,308.1852251886237 C 520.8430281658192,292.17604898903346 507.52886664842447,263.248243087887 518.8575830272603,243.6260758067442 C 530.1865589414083,224.00390852560167 561.8960643190347,221.07064042677894 589.6242980070546,237.07955709105704 C 573.6153813427767,209.35106386772486 576.5486494415992,177.64181802541066 596.170816722742,166.31284211126263 C 615.7929840038847,154.98412573242695 644.7207899050312,168.29828724982144 660.7299661046212,196.0267804731534 C 660.7299661046212,164.00868760928552 679.1250504295409,138.01414980696154 701.7827427225249,138.01414980696154"/></clipPath></defs>
+          <g clip-path="url(#kwiatek-ksztalt)">
+            <rect x="490.56" y="138.01" width="422.45" height="422.45" fill="#f3e7c9"/>
+            <g class="flower-imgs"><image class="fl-img on" href="kwiatek/01.jpg" x="490.56" y="138.01" width="422.45" height="422.45" preserveAspectRatio="xMidYMid slice"/></g>
+          </g>
+        </svg>
+      </div>
 
-  <!-- OFERTA -->
-  <section id="oferta" class="section oferta">
-    <div class="oferta-container">
-      <div class="text-content">
+      <img class="dd dd-star" src="img/doodle/gwiazdka.svg" alt="">
+      <img class="dd dd-sun" src="img/doodle/sloneczko.svg" alt="">
+      <img class="dd dd-plane" src="img/doodle/samolocik.svg" alt="">
+    </section>
+
+    <span class="link-m" aria-hidden="true"></span>
+
+    <!-- ===== OFERTA ===== -->
+    <section class="oferta">
+      <div class="hours">
+        <img class="bubble" src="img/doodle/dzien_dobry.svg" alt="Dzień dobry!">
+        <img class="mascot" src="img/doodle/buzka.svg" alt="Maskotka HappyKids">
+        <img class="h717" src="img/doodle/7-17.svg" alt="Godziny otwarcia: 7:00–17:00">
+      </div>
+      <div class="oferta-txt rv" id="oferta">
         <h2>Oferta</h2>
-        <p>
-          Placówka czynna w godzinach <strong>7:00–17:00</strong>.<br />
-          Oferujemy pełne wyżywienie, w postaci czterech posiłków dziennie <br>- przygotowane przez sprawdzony katering.
-        </p>
-        <p>
-          W czasie pobytu zapewniamy bogaty program edukacyjny: zajęcia dydaktyczne, język angielski,
-          rytmikę, sport, zabawy sensoryczne i wiele twórczych aktywności.
-        </p>
-        <p>
-          Kameralna atmosfera, indywidualne podejście do każdego dziecka i radość wspólnej nauki –
-          to nasz przepis na szczęśliwe przedszkole.
-        </p>
-        <a href="podstrony/oferta.html" class="btn-more-oferta">Więcej</a>
+        <ul class="feat">
+          <li><strong>Kameralna atmosfera</strong><br>i&nbsp;indywidualne podejście do malucha.</li>
+          <li><strong>Pełne wyżywienie</strong><br>cztery posiłki dziennie.</li>
+          <li><strong>Bogaty program edukacyjny</strong>:<br>zajęcia dydaktyczne, angielski, rytmika i&nbsp;sensoryka</li>
+        </ul>
       </div>
+      <img class="dd dd-arrow" src="img/doodle/strzalka_w_dol.svg" alt="">
+      <a class="btn btn-oferta rv" href="podstrony/oferta.html">Więcej<span class="sr"> o ofercie</span></a>
+    </section>
 
-      <div class="oferta-img">
-        <img src="media/slonko.png" alt="Słonko HappyKids" class="slonko-img" />
+    <span class="link-m" aria-hidden="true"></span>
+
+    <!-- ===== NASZ DZIEŃ ===== -->
+    <section class="nd" id="nasz-dzien" aria-roledescription="karuzela" aria-label="Nasz dzień – plan dnia">
+      <h2 class="nd__title">Nasz dzień</h2>
+      <ol class="nd__dots" aria-label="Wybierz porę dnia"></ol>
+      <div class="nd__body" tabindex="0">
+        <button class="nd__arrow nd__arrow--prev" type="button" aria-label="Poprzednia pora dnia">
+          <svg viewBox="0 0 38 22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M36 11.5 C 26 10.5 14 11.5 3 11"/><path d="M11 3 L3 11 L11 19"/></svg>
+        </button>
+        <div class="nd__stage"></div>
+        <button class="nd__arrow nd__arrow--next" type="button" aria-label="Następna pora dnia">
+          <svg viewBox="0 0 38 22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10.5 C 12 11.5 24 10.5 35 11"/><path d="M27 3 L35 11 L27 19"/></svg>
+        </button>
       </div>
-    </div>
-  </section>
+      <p class="sr" aria-live="polite" id="nd-live"></p>
+      <svg class="nd__clouds" viewBox="0 125 1635 230" aria-hidden="true"><g fill="#fff"><circle cx="55" cy="333" r="200"/><circle cx="325" cy="470" r="195"/><circle cx="582" cy="352" r="192"/><circle cx="955" cy="408" r="198"/><circle cx="1237" cy="433" r="188"/><circle cx="1575" cy="326" r="193"/><rect x="0" y="345" width="1635" height="10"/></g></svg>
+    </section>
 
-  <!-- NASZ DZIEŃ — KARUZELA 9 OKIENEK -->
-<section id="nasz-dzien" class="section yellow">
-  <div class="container">
-    <h2>Nasz dzień</h2>
+    <span class="link-m" aria-hidden="true"></span>
 
-    <div class="carousel cards-3" aria-label="Nasz dzień — karuzela">
-      <button class="carousel-btn prev" aria-label="Poprzednia grupa">‹</button>
-
-      <div class="carousel-track" id="dayGrid">
-        <!-- 1 -->
-        <article class="card">
-          <div class="card-top">
-            <span class="time">7:00–9:00</span>
-          </div>
-          <img src="naszdzien_zdj/klocki.jpeg" alt="Zabawy dowolne">
-          <div class="card-bottom">
-            <p class="caption">Zabawy dowolne</p>
-          </div>
-        </article>
-
-        <!-- 2 -->
-        <article class="card">
-          <div class="card-top">
-            <span class="time">9:00–10:00</span>
-          </div>
-          <img src="naszdzien_zdj/mycie.jpeg" alt="Powitanie, toaleta poranna, śniadanie">
-          <div class="card-bottom">
-            <p class="caption">Powitanie, toaleta poranna, śniadanie</p>
-          </div>
-        </article>
-
-        <!-- 3 -->
-        <article class="card">
-          <div class="card-top">
-            <span class="time">10:00–11:00</span>
-          </div>
-          <img src="naszdzien_zdj/edukacyjne.jpeg" alt="Zajęcia edukacyjne">
-          <div class="card-bottom">
-            <p class="caption">Zajęcia edukacyjne</p>
-          </div>
-        </article>
-
-        <!-- 4 -->
-        <article class="card">
-          <div class="card-top">
-            <span class="time">11:15–12:30</span>
-          </div>
-          <img src="naszdzien_zdj/sport.jpeg" alt="Zabawa w ogrodzie">
-          <div class="card-bottom">
-            <p class="caption">Zabawa w ogrodzie</p>
-          </div>
-        </article>
-
-        <!-- 5 -->
-        <article class="card">
-          <div class="card-top">
-            <span class="time">12:30–13:00</span>
-          </div>
-          <img src="naszdzien_zdj/obiad.jpeg" alt="Obiad">
-          <div class="card-bottom">
-            <p class="caption">Obiad</p>
-          </div>
-        </article>
-
-        <!-- 6 -->
-        <article class="card">
-          <div class="card-top">
-            <span class="time">13:00–14:00</span>
-          </div>
-          <img src="naszdzien_zdj/goodday.jpeg" alt="J. angielski, odpoczynek">
-          <div class="card-bottom">
-            <p class="caption">J. angielski, odpoczynek</p>
-          </div>
-        </article>
-
-        <!-- 7 -->
-        <article class="card">
-          <div class="card-top">
-            <span class="time">14:00–14:45</span>
-          </div>
-          <img src="naszdzien_zdj/czytanie.jpeg" alt="Czytanie bajek, zabawy dowolne">
-          <div class="card-bottom">
-            <p class="caption">Odpoczynek, zabawy dowolne</p>
-          </div>
-        </article>
-
-        <!-- 8 -->
-        <article class="card">
-          <div class="card-top">
-            <span class="time">15:30–16:00</span>
-          </div>
-          <img src="naszdzien_zdj/owoce.jpeg" alt="Podwieczorek">
-          <div class="card-bottom">
-            <p class="caption">Podwieczorek</p>
-          </div>
-        </article>
-
-        <!-- 9 -->
-        <article class="card">
-          <div class="card-top">
-            <span class="time">16:00–17:00</span>
-          </div>
-          <img src="naszdzien_zdj/miś.jpeg" alt="Zabawy dowolne, odbiór dzieci">
-          <div class="card-bottom">
-            <p class="caption">Zabawy dowolne, odbiór dzieci</p>
-          </div>
-        </article>
+    <!-- ===== GALERIA ===== -->
+    <section class="galeria">
+      <h2 class="rv" id="galeria">Galeria</h2>
+      <img class="dd dd-camera" src="img/doodle/aparat.svg" alt="">
+      <div class="g-row" data-gallery-home>
+        <a class="gtile rv" href="podstrony/galeria.html"><img src="galeria/2025-09-03-zdjecie-1.jpg" alt="Zdjęcie z życia przedszkola" loading="lazy"></a>
+        <a class="gtile rv" href="podstrony/galeria.html" style="--d:90ms"><img src="galeria/2025-09-02-zdjecie-2.jpg" alt="Zdjęcie z życia przedszkola" loading="lazy"></a>
+        <a class="gtile rv" href="podstrony/galeria.html" style="--d:180ms"><img src="galeria/2025-09-01-zdjecie-3.jpg" alt="Zdjęcie z życia przedszkola" loading="lazy"></a>
       </div>
+      <a class="btn btn-gal rv" href="podstrony/galeria.html">Więcej<span class="sr"> zdjęć</span></a>
+    </section>
 
-      <button class="carousel-btn next" aria-label="Następna grupa">›</button>
-      <div class="carousel-dots" id="dayDots" aria-label="Nawigacja stron"></div>
-    </div>
-  </div>
-</section>
+    <span class="link-m" aria-hidden="true"></span>
 
+    <!-- ===== WSPÓŁPRACA ===== -->
+    <section class="wspol">
+      <img class="dd dd-hands" src="img/doodle/dlonie.svg" alt="">
+      <h2 class="rv" id="wspolpraca">Współpraca</h2>
+      <ul class="partners">
+        <li class="p1 rv"><button type="button" class="partner-btn" data-name="Teatr Arlekin" data-logo="img/partnerzy/arlekin.webp" data-desc="Dzięki pasji, zaangażowaniu i pozytywnej energii Aktorów, dzieci z wielkim przejęciem odkrywają świat baśni. Każde spotkanie jest dla naszych Przedszkolaków źródłem radości i dobrej zabawy." aria-haspopup="dialog"><img src="img/partnerzy/arlekin.webp" alt="Teatr Arlekin" loading="lazy"><span class="sr"> – pokaż opis</span></button></li>
+        <li class="p2 rv" style="--d:80ms"><button type="button" class="partner-btn" data-name="Akademia Dzikiego Dziecka" data-logo="img/partnerzy/dziki.webp" data-desc="Zajęcia przyrodnicze i survivalowe w plenerze." aria-haspopup="dialog"><img src="img/partnerzy/dziki.webp" alt="Akademia Dzikiego Dziecka" loading="lazy"><span class="sr"> – pokaż opis</span></button></li>
+        <li class="p3 rv" style="--d:160ms"><button type="button" class="partner-btn" data-name="Czas Na Warsztaty" data-logo="img/partnerzy/czas-na-warsztaty.webp" data-desc="Nowoczesne zajęcia edukacyjne z wykorzystaniem zestawów LEGO Education WeDo 2.0, stworzone z myślą o najmłodszych." aria-haspopup="dialog"><img src="img/partnerzy/czas-na-warsztaty.webp" alt="Czas Na Warsztaty" loading="lazy"><span class="sr"> – pokaż opis</span></button></li>
+        <li class="p4 rv" style="--d:240ms"><button type="button" class="partner-btn" data-name="eMski Sport" data-logo="img/partnerzy/emski-sport.webp" data-desc="Na zajęciach najmłodsi mogą zapoznać się z elementami dyscyplin sportowych, takich jak piłka nożna, siatkówka, koszykówka, hokej, piłka ręczna i lekkoatletyka." aria-haspopup="dialog"><img src="img/partnerzy/emski-sport.webp" alt="eMski Sport" loading="lazy"><span class="sr"> – pokaż opis</span></button></li>
+        <li class="p5 rv" style="--d:320ms"><button type="button" class="partner-btn" data-name="Przyroda i Ja" data-logo="img/partnerzy/przyroda-i-ja.webp" data-desc="Zajęcia przyrodniczo-ekologiczne, które z powodzeniem są realizowane przez p. Maćka już od kilku lat w naszej placówce. Przy pomocy atrakcyjnej formy zajęć, dzieci wprowadzane są w fascynujący świat zwierząt, roślin, grzybów i mikroorganizmów, poznając funkcjonowanie wszechświata." aria-haspopup="dialog"><img src="img/partnerzy/przyroda-i-ja.webp" alt="Przyroda i Ja" loading="lazy"><span class="sr"> – pokaż opis</span></button></li>
+      </ul>
+    </section>
 
-<!-- GALERIA -->
-<section id="galeria" class="section white">
-  <div class="container">
-    <h2>Galeria</h2>
-    <div class="gallery-row">
-      <div class="gallery-item">
-        <img src="fotki/20250917_104818.jpg" alt="Zabawy w przedszkolu">
+    <span class="link-m" aria-hidden="true"></span>
+
+    <!-- ===== KONTAKT ===== -->
+    <section class="kontakt">
+      <svg class="k-clouds" id="kontakt" viewBox="0 0 702 200" aria-hidden="true"><path d="M0,200 L0.0,78.0 L2.0,79.5 L12.0,84.5 L16.0,85.5 L19.0,87.0 L27.0,89.0 L29.0,89.0 L33.0,90.0 L36.0,90.0 L37.0,90.5 L51.0,90.5 L52.0,90.0 L55.0,90.0 L56.0,89.5 L61.0,89.0 L69.0,87.0 L72.0,85.5 L76.0,84.5 L86.0,79.5 L87.0,78.5 L90.0,77.0 L93.0,74.5 L95.0,73.5 L101.0,68.0 L102.0,67.5 L109.0,60.0 L112.0,56.0 L118.0,46.5 L119.0,46.5 L122.0,48.0 L130.0,50.0 L132.0,50.0 L133.0,50.5 L135.0,50.5 L139.0,51.5 L155.0,51.5 L156.0,51.0 L164.0,50.0 L172.0,48.0 L178.0,45.5 L179.0,45.5 L190.0,40.0 L200.0,33.0 L208.0,25.5 L209.0,25.5 L212.0,34.5 L216.0,43.0 L221.0,51.0 L227.0,58.5 L235.0,66.5 L238.0,68.5 L240.0,70.5 L242.0,71.5 L246.0,74.5 L260.0,81.5 L261.0,81.5 L266.0,83.5 L274.0,85.5 L280.0,86.0 L281.0,86.5 L285.0,86.5 L286.0,87.0 L295.0,87.0 L296.0,86.5 L300.0,86.5 L304.0,85.5 L307.0,85.5 L311.0,84.0 L316.0,83.0 L318.0,82.0 L319.0,82.0 L324.0,79.5 L325.0,79.5 L336.0,73.5 L344.0,67.5 L347.0,64.5 L348.0,64.0 L355.0,56.5 L363.0,67.5 L373.0,77.5 L379.0,82.0 L386.0,86.0 L387.0,87.0 L391.0,89.0 L392.0,89.0 L394.0,90.5 L398.0,91.5 L404.0,94.0 L410.0,95.5 L412.0,95.5 L416.0,96.5 L419.0,96.5 L420.0,97.0 L434.0,97.0 L435.0,96.5 L438.0,96.5 L439.0,96.0 L444.0,95.5 L452.0,93.5 L455.0,92.0 L459.0,91.0 L470.0,85.5 L471.0,84.5 L474.0,83.0 L483.0,76.0 L491.0,68.0 L496.0,61.5 L501.0,53.5 L505.0,45.5 L508.0,37.0 L512.0,19.0 L518.0,20.5 L520.0,20.5 L524.0,21.5 L527.0,21.5 L528.0,22.0 L541.0,22.0 L542.0,21.5 L545.0,21.5 L546.0,21.0 L551.0,20.5 L561.0,18.0 L564.0,16.5 L565.0,16.5 L576.0,11.0 L577.0,24.0 L578.0,29.5 L580.0,37.5 L583.0,45.5 L586.0,52.0 L592.0,61.5 L598.0,69.0 L607.0,77.5 L613.0,82.0 L619.0,85.5 L620.0,86.5 L631.0,91.5 L632.0,91.5 L637.0,93.5 L643.0,95.0 L644.0,99.5 L646.0,95.5 L648.0,95.5 L652.0,96.5 L669.0,96.5 L670.0,96.0 L678.0,95.0 L686.0,93.0 L689.0,91.5 L690.0,91.5 L693.0,90.0 L694.0,90.0 L700.0,87.0 L702.0,87.0 L702,200 Z" fill="var(--green)"/></svg>
+      <div class="k-panel">
+        <div class="k-info">
+          <h2>Kontakt</h2>
+          <p class="k-name">Niepubliczny Punkt Przedszkolny<br>„HappyKids”</p>
+          <p class="k-tel"><img class="k-ico" src="img/doodle/sluchawka.svg" alt=""><a href="tel:+48455401606">+48 455 401 606</a></p>
+          <p class="k-mail"><img class="k-ico" src="img/doodle/at.svg" alt=""><a href="mailto:przedszkolehappykids.wroc@gmail.com">przedszkolehappykids.wroc@<wbr>gmail.com</a></p>
+          <p class="k-adr">ul. Trawowa 34, 54-614 Wrocław<br>Godziny otwarcia: pon.–pt. 7:00–17:00</p>
+          <a class="fb" href="https://www.facebook.com/profile.php?id=100063485363954" target="_blank" rel="noopener">Dołącz do nas <img src="img/facebook.png" alt="" width="32" height="32"><span class="sr"> na Facebooku</span></a>
+        </div>
+        <a class="map rv" href="https://www.google.com/maps/dir/?api=1&amp;destination=Trawowa+34%2C+54-614+Wroc%C5%82aw" target="_blank" rel="noopener" aria-label="Mapka dojazdu – otwórz trasę w Mapach Google">
+          <img src="img/mapa.webp" alt="Mapka dojazdu: ul. Trawowa 34, Muchobór Wielki, przy Krzemienieckiej i Stanisławowskiej" loading="lazy">
+          <span class="map-cta">Wyznacz trasę</span>
+        </a>
       </div>
-      <div class="gallery-item">
-        <img src="fotki/20250919_102122.jpg" alt="Zajęcia ruchowe">
-      </div>
-      <div class="gallery-item">
-        <img src="fotki/20250902_100107.jpg" alt="Zabawa na świeżym powietrzu">
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+    <svg class="spiral-m" viewBox="0 0 60 70" aria-hidden="true"><path class="draw" pathLength="1" d="M30 2 C 18 14 10 28 15 42 C 21 57 42 60 52 50 C 62 40 58 22 46 18 C 34 14 24 24 26 36 C 28 46 38 48 44 42"/></svg>
+  </main>
+
+  <!-- ===== STOPKA ===== -->
+  <footer class="ftr">
+    <p>© <span data-year>2026</span> Niepubliczny Punkt Przedszkolny „HappyKids” <span class="sep">·</span> ul. Trawowa 34, 54-614 Wrocław <span class="sep">·</span> <a href="podstrony/polityka-prywatnosci.html">Polityka prywatności</a></p>
+  </footer>
+</div>
 
 
-
-<!-- WSPÓŁPRACE -->
-<section id="wspolprace" class="section white">
-  <div class="container">
-    <h2>Współpraca</h2>
-
-    <div class="partners-grid">
-      <button class="partner" data-name="Teatr Arlekin" data-description="
-Dzięki pasji, zaangażowaniu i pozytywnej energii Aktorów, dzieci z wielkim przejęciem odkrywają świat
-baśni. Każde spotkanie jest dla naszych Przedszkolaków źródłem radości i dobrej zabawy.">
-        <img src="wspolprace_biale/Arlekin.jpg" alt="Teatr Arlekin">
-      </button>
-
-      <button class="partner" data-name="Akademia Dzikiego Dziecka" data-description="Zajęcia przyrodnicze i survivalowe w plenerze.">
-        <img src="wspolprace_biale/Dziki.png" alt="Akademia Dzikiego Dziecka">
-      </button>
-
-      <button class="partner" data-name="Czas Na Warsztaty" data-description="Nowoczesne zajęcia edukacyjne z wykorzystaniem zestawów LEGO Education WeDo 2.0, stworzone z myślą o najmłodszych.">
-        <img src="wspolprace_biale/CzasNaWarsztaty2.jpg" alt="Czas Na Warsztaty">
-      </button>
-
-      <button class="partner" data-name="Emski" data-description="Na zajęciach najmłodsi mogą zapoznać się z elementami dyscyplin sportowych takimi jak piłka nożna, siatkówka, koszykówka, hokej, piłka ręczna, lekkoatletyka">
-        <img src="wspolprace_biale/emski2.png" alt="Emski">
-      </button>
-
-      <button class="partner" data-name="Przyroda i Ja" data-description="Zajęcia przyrodniczo – ekologiczne, które z powodzeniem są realizowane przez p. Maćka już od kilku lat
-w naszej placówce. Przy pomocy atrakcyjnej formy zajęć, dzieci wprowadzane są w fascynujący świat
-zwierząt , roślin, grzybów i mikroorganizmów poznając funkcjonowanie wszechświata.">
-        <img src="wspolprace_biale/przyrodaija.jpg" alt="Przyroda i Ja">
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- POPUP / MODAL -->
-<div id="partnerModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
-  <div class="modal-content" role="document">
-    <button class="modal-close" aria-label="Zamknij">&times;</button>
-    <img id="modalImage" src="" alt="" />
-    <div class="modal-text">
-      <h3 id="modalTitle"></h3>
-      <p id="modalDescription"></p>
+<!-- okienko z opisem partnera -->
+<div class="pm" id="pm" role="dialog" aria-modal="true" aria-labelledby="pm-name" hidden>
+  <div class="pm-card">
+    <button class="pm-close" type="button" aria-label="Zamknij"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6 L18 18 M18 6 L6 18"/></svg></button>
+    <div class="pm-logo"><img id="pm-logo" src="" alt=""></div>
+    <h3 id="pm-name"></h3>
+    <p id="pm-desc"></p>
+    <div class="pm-nav">
+      <button class="pm-prev" type="button" aria-label="Poprzedni partner"><svg viewBox="0 0 38 22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M36 11.5 C 26 10.5 14 11.5 3 11"/><path d="M11 3 L3 11 L11 19"/></svg></button>
+      <span id="pm-count"></span>
+      <button class="pm-next" type="button" aria-label="Następny partner"><svg viewBox="0 0 38 22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10.5 C 12 11.5 24 10.5 35 11"/><path d="M27 3 L35 11 L27 19"/></svg></button>
     </div>
   </div>
 </div>
 
-
-
-
-
-  <!-- KONTAKT -->
-<section id="kontakt" class="section white">
-  <div class="container">
-    <div class="contact-info">
-      <h2>Kontakt</h2>
-      <p><strong>Niepubliczny Punkt Przedszkolny "HappyKids"</strong></p>
-      <p>
-  📞 Telefon: <a href="tel:+48455401606">+48 455 401 606</a><br>
-  <span class="mail-line">
-    <img src="icons/email.png" alt="Ikona poczty" class="icon-mail">
-    <a href="mailto:przedszkolehappykids.wroc@gmail.com">
-      przedszkolehappykids.wroc@gmail.com
-    </a>
-  </span>
-</p>
-
-
-      <p>Godziny otwarcia:<br />Poniedziałek - Piątek: 7:00 - 17:00</p>
-      
-
-      <div class="facebook-info">
-  <a class="facebook-link" href="https://www.facebook.com/profile.php?id=100063485363954" target="_blank">
-    Dołącz do nas 
-    <img src="icons/facebook.png" alt="Facebook" class="icon-facebook" />
-  </a>
-</div>
-    </div>
-
-    <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20043.530250179017!2d16.93820597875979!3d51.1003179468548!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc1bed2c95555%3A0x19ea65021b2a3faa!2sNiepubliczny%20Punkt%20Przedszkolny%20Happy%20Kids!5e0!3m2!1sen!2spl!4v1762887293449!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-  </div>
-</section>
-
-
-  <script src="script.js"></script>
+<script src="js/zdjecia-lista.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
