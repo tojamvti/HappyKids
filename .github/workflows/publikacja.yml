@@ -1,5 +1,7 @@
 # Publikacja strony HappyKids na GitHub Pages.
 # Uruchamia się sama po każdej zmianie (np. wgraniu zdjęć do folderu galeria/).
+# Dwa etapy: „budowanie” przygotowuje stronę i zdjęcia, „publikacja” wystawia ją
+# w internecie. Rozdzielenie ich zapobiega błędowi „No artifacts named github-pages”.
 name: Publikacja strony
 
 on:
@@ -17,17 +19,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  publikacja:
+  budowanie:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0   # pełna historia: kolejność zdjęć wg daty wgrania
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -37,8 +36,16 @@ jobs:
           python .github/build_site.py
 
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+
+  publikacja:
+    needs: budowanie
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
       - id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
