@@ -143,10 +143,10 @@
       ['10:00–11:00', 'Zajęcia edukacyjne'],
       ['11:15–12:30', 'Zabawa w ogrodzie'],
       ['12:30–13:00', 'Obiad'],
-      ['13:00–14:00', 'J. angielski, odpoczynek'],
-      ['14:00–14:45', 'Odpoczynek, zabawy dowolne'],
+      ['13:00–14:00', 'Angielski i chwila odpoczynku'],
+      ['14:00–14:45', 'Odpoczynek i zabawy'],
       ['15:30–16:00', 'Podwieczorek'],
-      ['16:00–17:00', 'Zabawy dowolne, odbiór dzieci']
+      ['16:00–17:00', 'Zabawy i powrót do domu']
     ];
     const stage = $('.nd__stage', nd), dots = $('.nd__dots', nd), body = $('.nd__body', nd);
     const prev = $('.nd__arrow--prev', nd), next = $('.nd__arrow--next', nd), live = $('#nd-live');
